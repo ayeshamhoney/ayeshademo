@@ -1,0 +1,18 @@
+pipeline {
+    agent  any
+    stages {    
+         stage('deploy') {
+            agent {
+                  docker {
+                    image 'google/cloud-sdk:latest'
+                    args '-v /var/run/docker.sock:/var/run/docker.sock'
+                  }
+            }
+            steps {    
+                 script {    
+                    docker.build  "gcr.io/myporject/mydockerimage:1"
+                } 
+             }
+          }
+    }
+}
