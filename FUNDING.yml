@@ -1,0 +1,5 @@
+* @jenkinsci/team-docker-packaging
+*/rhel/ubi*/ 
+*/almalinux/almalinux8/ 
+*/debian/bookworm/hotspot 
+*/rhel/ubi9/hotspot 
